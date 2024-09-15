@@ -1,0 +1,96 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 1.0vw  5vw;
+    background-color: #3A3D46;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.title-box{
+    padding: 0 1vw;
+    justify-Content: 'center';
+    align-items: 'center';
+    flex: 1;
+    height: max-content;
+}
+
+.title{
+    color: #FFFFFF;
+    font-size: 180%;
+    /* font-size: 1.2rem; */
+    margin: 0%;
+    font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
+    font-weight: 600;
+}   
+
+.logo {
+    display: 'flex';
+    align-Items:'center';
+}
+
+/* styles.css */
+.bordered-div {
+    border: 0.00000001vw solid #3A3D46; /* White border using hex color code */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background-color: #3A3D46;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.nav-container p {
+    color: #ffffff; 
+    font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
+    font-weight: 600;
+    padding: 0.001vw 2%;
+}
+
+.front-panel {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 18%;
+    z-index: 2;
+    flex-direction: row;
+    /* width: 100%; */
+}
+
+.front-image-title{
+    text-align: left;
+}
+
+.front-image-title p {
+    background-color: white;
+    padding: 10px 20px;
+    margin: 12px 0;        
+    font-family:'Yumincho', serif;  
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #3A3D46;
+    width: fit-content;
+}
+
+
+
+
+.login-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overall-container {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    /* justify-content: center;      Centers content horizontally */
+    align-items: center;  
+    
+}

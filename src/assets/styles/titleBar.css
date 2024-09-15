@@ -1,0 +1,15 @@
+.title-bar{
+    background-color: #3A3D46;
+    color: #fff;
+    padding: 1% 1%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 0.4%;
+}
+
+.title{
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #ffffff;
+}

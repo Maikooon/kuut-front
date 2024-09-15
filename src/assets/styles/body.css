@@ -1,0 +1,7 @@
+/* bodyのPadding とか色とかを指定する */
+
+body {
+    background-color: #f0f0f0;
+    font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
+    /* padding: 10% 10%; */
+}

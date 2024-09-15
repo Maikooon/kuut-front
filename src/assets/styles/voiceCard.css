@@ -1,0 +1,61 @@
+.voice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1vh 2.4vw;
+}   
+
+
+.card {
+    width: 20%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5% 2%;
+    background-color: #3A3D46;
+    border-color: #747474;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.voice {
+    font-size: 0.8em;
+    color: #ffffff;
+    padding-bottom: 1.6%;
+}
+
+.border {
+    border-bottom: 1px solid #747474;
+}   
+
+.company-info{
+    padding-top: 4%;
+    display: flex;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+.university-info{
+    padding-top: 2%;
+    display: flex;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.rating{
+    display: flex;
+    gap: 4%;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding-top: 4%;
+    display: flex;
+    color: #ffffff;
+    font-size: 1.0em;
+}
+
+.comment{
+    padding-top: 5%;
+    display: flex;
+    color: #ffffff;
+    font-size: 0.9em;
+}
