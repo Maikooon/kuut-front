@@ -51,46 +51,67 @@
 }
 
 .front-panel {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vw 18%;
     z-index: 2;
-    flex-direction: row;
-    /* width: 100%; */
+    flex-direction: row; 
+    background-color: red;
+    padding: 4px 60px ;
+    height: 400px;
+    width: 80vw;
 }
 
 .front-image-title{
     text-align: left;
+    background-color: antiquewhite;
+    height: 300px;
+    width: 50vw;
+    display: flex;
+    justify-content: center; /* 縦方向の中央寄せ */
+    flex-direction: column;  /* 縦方向に並べる */
+    gap: 1px;              /* 要素間の間隔を指定 */
 }
+
 
 .front-image-title p {
+    font-size: 2em;        
+    color: #ffffff;          
     background-color: white;
-    padding: 10px 20px;
-    margin: 12px 0;        
-    font-family:'Yumincho', serif;  
-    font-weight: 600;
-    font-size: 2.5rem;
+    /* font-weight: 600; */
     color: #3A3D46;
     width: fit-content;
+    font-family:'Yumincho', serif;  
+    padding: 1.2% 4%;
+    margin-bottom: 0px;
 }
-
-
-
 
 .login-panel{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: aqua;
+
 }
 
 .overall-container {
-    position: relative;
-    height: auto;
+    /* position: relative; */
+    height: 420px;
     width: 100%;
-    display: flex;
-    /* justify-content: center;      Centers content horizontally */
     align-items: center;  
-    
+    display: flex;
+    /* background-color: red; */
+    justify-content: center; 
+    z-index: 1;
+    background-image: url('./../images/front-image.png'); /* 画像を背景に指定 */
+    background-size: cover;     /* 画像をコンテナ全体にフィットさせる */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防止 */
 }
+
+.front-image-style { 
+    height: 0.001vh;     
+    object-fit: 'cover';
+    position: 'relative'; 
+};

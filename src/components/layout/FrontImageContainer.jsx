@@ -16,22 +16,10 @@ const FrontImageContainer = () => {
                         <h3>ログイン</h3>
                     </div>
                 </div >
-                <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-                    <img src={FrontImage} style={frontImageStyle} alt="Front" />
-                </div>
             </div>
         </>
 
     );
 }
-
-
-const frontImageStyle = {
-    width: '100%',          // Make the image fit the width of its container
-    height: 'auto',        // Maintain aspect ratio by adjusting height automatically
-    maxHeight: '100vh',    // Ensure the image does not exceed the viewport height
-    objectFit: 'cover',    // Cover the container, cropping the image if necessary
-};
-
 
 export default FrontImageContainer;

@@ -1,15 +1,12 @@
 import React from "react";
 import './../../assets/styles/titleBar.css';
 
-const TitleBar = ({ title }) => {
+const TitleBar = ({ subindex }) => {
     return (
         <div class="title-bar">
-            <div class="title">
-                {title}
-            </div>
+            <p>{subindex}</p>
         </div>
     );
 }
-
 
 export default TitleBar;

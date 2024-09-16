@@ -1,0 +1,71 @@
+.footer{
+    font-family:'Yumincho', serif; 
+    background-color: #3A3D46;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+
+.footer-top{
+    display: flex;
+    padding: 2vh 8vw 2vh 4vw;
+    justify-content: space-between;
+    background-color: #3A3D46;
+    color: white;
+    font-size: 1em;
+    border-bottom: 0.2px solid #e9ecef;
+}
+
+.footer-top-left{
+    display: flex;
+    gap: 6vw;
+    padding-left: 1.2vw;
+}   
+
+.footer-top-left-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.2vw;
+    padding-right: 1.2vw;
+}
+
+.footer-top-left-box a {
+    font-size: 0.8em;
+    color: #ffffff; /* リンクの色を指定 */
+    text-decoration: none; /* 下線を削除 */
+    border-bottom: none; /* 不要かもしれませんが、念のため */
+}
+
+/* リンクが訪問済みでも色が変わらないようにする */
+.footer-top-left-box a:visited {
+    color: #ffffff; /* 同じ色を指定 */
+}
+
+/* リンクにホバーしたときの下線を消す */
+.footer-top-left-box a:hover {
+    text-decoration: none; /* ホバー時も下線が表示されない */
+}
+
+/* リンクをクリックしてもアクティブな状態で色が変わらないようにする */
+.footer-top-left-box a:active {
+    color: #ffffff; /* 同じ色を指定 */
+}
+
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3A3D46;
+    color: #ffffff;
+    font-size: 0.4em;
+    padding: 2vh 4vw;
+}
+
+.footer-links{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    gap: 1.2vw;
+    padding-left: 1.2vw;
+}

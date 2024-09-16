@@ -1,7 +1,19 @@
 /* bodyのPadding とか色とかを指定する */
 
-body {
+
+.header{
+    font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
+}
+
+.body {
     background-color: #f0f0f0;
     font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
     /* padding: 10% 10%; */
+    padding: 2vh 4vw;
+    overflow-x: hidden;
+}
+
+.container{
+    padding: 2vh 4vw;
+    font-family:'Yumincho', serif;
 }

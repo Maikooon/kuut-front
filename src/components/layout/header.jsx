@@ -3,7 +3,6 @@ import './../../assets/styles/header.css';
 import UserActions from '../mui/useractions';
 import Nav from '../mui/nav';
 import logo from './../../assets/images/logo.png';
-import FrontImageContainer from './FrontImageContainer';
 
 const Header = () => {
     return (
@@ -18,8 +17,9 @@ const Header = () => {
                 <UserActions />
             </div>
             <Nav />
-            <FrontImageContainer />
+
         </>
+
     );
 }
 
