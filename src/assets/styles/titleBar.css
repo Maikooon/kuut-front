@@ -3,11 +3,36 @@
     color: #fff;
     text-align: center;
     font-weight: bold;
+    justify-content: row;
     border-radius: 0.4%;
+    flex-direction: column;  
+    display: flex;
+    padding: 0.8% 0%;
 }
 
 .title-bar p{
     font-size: 1.2em;
     color: #ffffff;
-    padding: 0.8% 0%;
+    margin: 0;    
+}
+
+
+.title-link{
+    /* position: absolute; */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.title-link a{
+    display: flex;
+    /* background-color: rebeccapurple; */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.6em;
+    padding-left: 84%;
+
 }

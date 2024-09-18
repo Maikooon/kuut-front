@@ -57,7 +57,7 @@
     align-items: center;
     z-index: 2;
     flex-direction: row; 
-    background-color: red;
+    /* background-color: red; */
     padding: 4px 60px ;
     height: 400px;
     width: 80vw;
@@ -65,7 +65,7 @@
 
 .front-image-title{
     text-align: left;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     height: 300px;
     width: 50vw;
     display: flex;
@@ -76,7 +76,7 @@
 
 
 .front-image-title p {
-    font-size: 2em;        
+    font-size: 2.8em;        
     color: #ffffff;          
     background-color: white;
     /* font-weight: 600; */
@@ -85,6 +85,7 @@
     font-family:'Yumincho', serif;  
     padding: 1.2% 4%;
     margin-bottom: 0px;
+    margin: 1%;
 }
 
 .login-panel{

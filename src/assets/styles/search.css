@@ -1,0 +1,15 @@
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+    color: #ffffff;
+    background-color: #EAEAEA;
+}
+
+.search-container p{
+    font-size: 1.2em;
+    color: #333333;
+    margin: 0;
+}
