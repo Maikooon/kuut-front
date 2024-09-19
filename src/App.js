@@ -64,3 +64,47 @@ function App() {
 }
 
 export default App;
+
+
+// import React, { useState, useEffect } from "react";
+// import { Center, Box, CheckboxGroup, Text } from "@chakra-ui/react";
+// import axios from "axios";
+
+// const App = () => {
+//   const [companies, setCompanies] = useState([]);
+
+//   const fetch = async () => {
+//     const res = await axios.get("http://localhost:3010/companies");  //ここでRailsで記載したコントロラを記載
+//     setCompanies(res.data);
+//   };
+
+//   useEffect(() => {
+//     fetch();
+//   }, []);
+
+
+//   return (
+//     <Box mt="64px">
+//       <Center>
+//         <Box>
+//           <Box mb="24px">
+//             <Text fontSize="24px" fontWeight="bold">
+//               タスク一覧
+//             </Text>
+//           </Box>
+//           <CheckboxGroup>
+//             {companies.map((company) => {
+//               return (
+//                 <Box key={company.id} mb="8px">
+//                   <Text>{company.name}</Text>
+//                 </Box>
+//               );
+//             })}
+//           </CheckboxGroup>
+//         </Box>
+//       </Center>
+//     </Box>
+//   );
+// };
+
+// export default App;
