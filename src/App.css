@@ -60,3 +60,16 @@
   padding-top: 1%; /* Adding top padding for symmetry */
   row-gap: 20px;  
 }
+
+.faq-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EAEAEA;
+  padding: 3.2%;
+}
+
+.faq-container h2{
+  border-bottom: #333333;
+  border-bottom: 2px solid #333333;
+}
