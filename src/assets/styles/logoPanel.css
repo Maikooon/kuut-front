@@ -1,0 +1,37 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* padding: 1.0vw  5vw; */
+    background-color: #3A3D46;
+    justify-content: space-between;
+}
+
+.logo-container p {
+    color: #ffffff; 
+    font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.6vw;
+    padding-left: 8px;
+}
+
+
+.logo-style  {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: 'center';  
+    justify-content: 'center';
+    background-color:#3A3D46;
+    margin: 0;
+};
+
+.logo-style img {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: 'center';  
+    justify-content: 'center';
+    background-color:#3A3D46;
+    margin: 0;
+};

@@ -1,6 +1,7 @@
 
 import React from "react";
 import FrontImage from './../../assets/images/front-image.png';
+import LoginPanel from "../mui/loginPanel";
 
 const FrontImageContainer = () => {
     return (
@@ -12,9 +13,8 @@ const FrontImageContainer = () => {
                         <p>インターン選びで</p>
                         <p>失敗させない　</p>
                     </div>
-                    <div class="login-panel">
-                        <h3>ログイン</h3>
-                    </div>
+                    <LoginPanel />
+                
                 </div >
             </div>
         </>

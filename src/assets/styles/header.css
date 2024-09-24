@@ -1,20 +1,14 @@
-.header-container {
+
+.header-container{
     display: flex;
     align-items: center;
-    padding: 1.0vw  5vw;
+    justify-content: space-between; 
     background-color: #3A3D46;
-    border-bottom: 1px solid #e9ecef;
+    padding: 1%;
+    padding-right: 4%;
 }
 
-.title-box{
-    padding: 0 1vw;
-    justify-Content: 'center';
-    align-items: 'center';
-    flex: 1;
-    height: max-content;
-}
-
-.title{
+.title-box p{
     color: #FFFFFF;
     font-size: 180%;
     /* font-size: 1.2rem; */
@@ -23,10 +17,11 @@
     font-weight: 600;
 }   
 
-.logo {
+.user-actions  {
     display: 'flex';
-    align-Items:'center';
-}
+    align-items: 'center';
+
+};
 
 /* styles.css */
 .bordered-div {
@@ -40,6 +35,7 @@
     align-items: center;
     padding: 0 5vw;
     background-color: #3A3D46;
+    border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
 }
 
@@ -115,5 +111,46 @@
     height: 0.001vh;     
     object-fit: 'cover';
     position: 'relative'; 
-};
+}
+
+
+.login-form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #06C755;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.login-form p {
+    color: #ffffff;
+    font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
+}
+
+.login-panel {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);;
+    padding: 2%;
+}
+
+.login-panel p{
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
+}
+
+
+.login-panel h3{
+    color: #ffffff;
+    font-size: 5%;
+    font-weight: 100;
+    font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
+}
+
 
