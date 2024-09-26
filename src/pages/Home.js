@@ -1,6 +1,6 @@
 import '../assets/styles/App.css';
 import Header from '../components/layout/header';
-import Voice from '../components/layout/voice';
+import Voice from "../components/mui/voice";
 import TitleBar from '../components/mui/titleBar';
 import Footer from '../components/layout/footer';
 import '../assets/styles/body.css';
