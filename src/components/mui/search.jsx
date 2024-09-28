@@ -10,6 +10,14 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import DirectionsIcon from '@mui/icons-material/Directions';
+
+
 
 //searchに関する文字たち
 const SearchTitle = ({title}) =>{
@@ -40,6 +48,62 @@ function BasicButton() {
     );
 }
 
+
+function CustomizedInputBase() {
+    return (
+        <div className="input-container">
+            <Paper
+                component="form"
+                sx={{ 
+                    p: 0, // Paper自体のpaddingをゼロに
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    minWidth: '90%', 
+                    backgroundColor: '#ffffff', // 必要に応じて背景色を調整
+                    borderRadius: '4px'  // 角を少し丸める
+                }}
+                size="small"
+            >
+                <InputBase
+                    sx={{ 
+                        ml: 1, 
+                        flex: 1, 
+                        padding: '0px',  // 必要に応じてpaddingを調整
+                        paddingLeft: '10px', // 左側のpaddingを調整
+                        paddingTop: '5px', // 上側のpaddingを調整
+                        paddingBottom: '2px', // 下側のpaddingを調整
+                    }}
+                    placeholder="キーワードで検索"
+                    inputProps={{ 'aria-label': 'キーワードで検索' }}
+                />
+                <IconButton 
+                    type="submit" 
+                    sx={{ 
+                        p: 0, // アイコンボタンのpaddingをゼロに
+                        backgroundColor: '#283A70', 
+                        color: 'white', 
+                        width: '40px', // ボタンの幅を固定
+                        height: '40px', // ボタンの高さを固定
+                        borderTopRightRadius: '4px', // 右上の角を丸める
+                        borderBottomRightRadius: '4px', // 右下の角を丸める
+                        borderTopLeftRadius: '0.1px', // 右上の角を丸める
+                        borderBottomLeftRadius: '0.1px', // 右下の角を丸める
+                        // borderRadius: '4px',
+                        '&:hover': {
+                            backgroundColor: '#303f9f', // ホバー時の色
+                        },
+                    }} 
+                    aria-label="search"
+                >
+                    <SearchIcon />
+                </IconButton>
+            </Paper>
+        </div>
+    );
+}
+
+
+
 //選択ボックスコンポーネント
 const  SelectSmall = ({title,selections}) => {
         const [age, setAge] = React.useState('');
@@ -50,7 +114,7 @@ const  SelectSmall = ({title,selections}) => {
         return (
         <div class = "select-set">
             <p>{title}</p>
-            <FormControl sx={{ min: 1, minWidth: '80%' }} size="small">
+            <FormControl sx={{ min: 1, minWidth: '80%' ,background:"#ffffff"}} size="small">
                 <InputLabel id="demo-select-small-label">-</InputLabel>
                 <Select
                 // labelId="demo-select-small-label"
@@ -94,29 +158,7 @@ const Search = () => {
             {/* 上のブロック */}
             <div class="search-input">
                 <SearchTitle title= "キーワードで探す" />
-                <div class =  "input-container">
-                    <TextField
-                        value={searchValue}
-                        onChange={(e) => setSearchValue(e.target.value)}
-                        onKeyPress={(e) => {
-                            if (e.key === 'Enter') {
-                                handleSearch();
-                            }
-                        }}
-                        // ここのフォントも変えたい
-                        placeholder="キーワードで検索"   
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <SearchIcon onClick={handleSearch} style={{ cursor: 'pointer' }} />
-                                </InputAdornment>
-                            ),
-                        }}
-                        margin="none"
-                        fullWidth 
-                        sx={{ height: '100%' }}  // 高さをパーセンテージで指定
-                    />
-                </div>
+                <CustomizedInputBase/>
             </div>
             {/* 下のブウn */}
             <div class="search-select">

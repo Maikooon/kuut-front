@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import '../assets/styles/App.css';
 import Header from '../components/layout/header';
 import Voice from "../components/mui/voice";
@@ -11,6 +13,22 @@ import Search from '../components/mui/search';
 import FAQ from '../components/mui/faq';
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+
+  const fetch = async () => {
+    try {
+      const res = await axios.get("http://localhost:3010/companies");
+      console.log(res.data);
+      setTasks(res.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetch();
+  }, []);
+
   const title1 = "東大生におすすすめの長期インターン求人";
   const title2 = "イベント・セミナー";
   const title3 = "記事・インターン体験談";
@@ -80,6 +98,17 @@ function App() {
               linkText = "インターンシップの種類について続きを読む" />
           
           </div>
+          <div>
+            {tasks.length > 0 ? (
+              <ul>
+                {tasks.map((task, index) => (
+                  <li key={index}>{task.name}</li>  
+                ))}
+              </ul>
+            ) : (
+              <p>No data available</p>
+            )}
+          </div>
         </div>
       </body>
       <footer>
@@ -90,3 +119,40 @@ function App() {
 }
 
 export default App;
+
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+
+// const App = () => {
+//   const [tasks, setTasks] = useState([]);
+
+//   const fetch = async () => {
+//     try {
+//       const res = await axios.get("http://localhost:3010/companies");
+//       console.log(res.data);
+//       setTasks(res.data);
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetch();
+//   }, []);
+
+//   return (
+//     <div>
+//       {tasks.length > 0 ? (
+//         <ul>
+//           {tasks.map((task, index) => (
+//             <li key={index}>{task.name}</li>  
+//           ))}
+//         </ul>
+//       ) : (
+//         <p>No data available</p>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default App;
