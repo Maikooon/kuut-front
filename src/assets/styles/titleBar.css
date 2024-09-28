@@ -1,21 +1,28 @@
 .title-bar{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #3A3D46;
     color: #fff;
-    text-align: center;
     font-weight: bold;
-    justify-content: row;
     border-radius: 0.4%;
-    flex-direction: column;  
-    display: flex;
     padding: 0.8% 0%;
 }
 
 .title-bar p{
     font-size: 1.2em;
     color: #ffffff;
-    margin: 0;    
+    margin: 0;   
+    z-index: 2; /* 背面に表示 */ 
 }
 
+.p1{
+    font-size: 0.6em;
+    color: #3A3D46;
+    margin: 0;    
+    z-index: 1; /* 背面に表示 */
+}
 
 .title-link{
     /* position: absolute; */
@@ -24,7 +31,6 @@
     font-size: 1.2em;
     font-weight: bold;
     margin: 0;
-
 }
 
 .title-link a{

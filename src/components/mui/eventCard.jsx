@@ -1,16 +1,14 @@
 import React from "react";
 import './../../assets/styles/eventCard.css';
 import frontImage from './../../assets/images/front-image.png';
-import flag from './../../assets/images/flag.png';
+import FlagIcon from '@mui/icons-material/Flag';
 
 const EventBar = () => {
     return (
         <>
             <div class="event-bar">
-                <div class="event">EVENT</div>
-                <div class="image-box">
-                    <img src={flag} alt="flag" />
-                </div>
+                <p>EVENT</p>
+                <FlagIcon sx={{color:"#ffffff", maskSize:"5%"}} />
             </div>
         </>
     );
@@ -23,8 +21,10 @@ const EventCard = ({ explain }) => {
                 <img src={frontImage} alt="company-image" />
                 <div class="event-title">
                     <EventBar />
-                    <div class="title">月収100万円llllーン</div>
-                    <div class="info">{explain}</div>
+                    <p>【初コラボ！！】</p>
+                    <p>東大メシ×慶應メシ</p>
+                    {/* <div class="info">{explain}</div> */}
+                    <div class="info">連続起業家の真田 哲弥さんを東大生・慶應生でお迎えしました！</div>
                 </div>
 
             </div>

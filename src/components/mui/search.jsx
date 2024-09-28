@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
 import './../../assets/styles/search.css';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
-
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import DirectionsIcon from '@mui/icons-material/Directions';
 
 
 
 //searchに関する文字たち
 const SearchTitle = ({title}) =>{
     return(
-        <div class="search-title">
+        <div className="search-title">
             <p>{title}</p>
         </div>
     );
@@ -50,31 +43,37 @@ function BasicButton() {
 
 
 function CustomizedInputBase() {
+
+
     return (
         <div className="input-container">
             <Paper
                 component="form"
                 sx={{ 
-                    p: 0, // Paper自体のpaddingをゼロに
+                    p: 0, 
                     display: 'flex', 
                     alignItems: 'center', 
                     minWidth: '90%', 
-                    backgroundColor: '#ffffff', // 必要に応じて背景色を調整
-                    borderRadius: '4px'  // 角を少し丸める
+                    backgroundColor: '#ffffff', 
+                    borderRadius: '4px'  
                 }}
                 size="small"
+                // onSubmit= {handleSearch}
             >
                 <InputBase
                     sx={{ 
                         ml: 1, 
                         flex: 1, 
-                        padding: '0px',  // 必要に応じてpaddingを調整
-                        paddingLeft: '10px', // 左側のpaddingを調整
-                        paddingTop: '5px', // 上側のpaddingを調整
-                        paddingBottom: '2px', // 下側のpaddingを調整
+                        padding: '0px', 
+                        paddingLeft: '10px', 
+                        paddingTop: '5px', 
+                        paddingBottom: '2px', 
                     }}
                     placeholder="キーワードで検索"
                     inputProps={{ 'aria-label': 'キーワードで検索' }}
+                    // value={searchValue}
+                    //ボタンが押された時の挙動を示す
+                    // onChange={(e) => setKeyword(e.target.value)} // 入力を更新
                 />
                 <IconButton 
                     type="submit" 
@@ -112,7 +111,7 @@ const  SelectSmall = ({title,selections}) => {
         setAge(event.target.value);
         };
         return (
-        <div class = "select-set">
+        <div className = "select-set">
             <p>{title}</p>
             <FormControl sx={{ min: 1, minWidth: '80%' ,background:"#ffffff"}} size="small">
                 <InputLabel id="demo-select-small-label">-</InputLabel>
@@ -138,15 +137,9 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
-
-
-const Search = () => {
+function Search () {
     const [searchValue, setSearchValue] = useState("");
 
-    const handleSearch = () => {
-        console.log("検索クエリ:", searchValue);
-        // 検索クエリを使って何かをする処理を追加
-    };
     const selections = [
         { value: 10, label: 'エンジニア' },
         { value: 20, label: 'デザイナー' },
@@ -154,14 +147,14 @@ const Search = () => {
     ];
 
     return (
-        <div class="search-container">
+        <div className="search-container">
             {/* 上のブロック */}
-            <div class="search-input">
+            <div className="search-input">
                 <SearchTitle title= "キーワードで探す" />
                 <CustomizedInputBase/>
             </div>
             {/* 下のブウn */}
-            <div class="search-select">
+            <div className="search-select">
                 <SelectSmall title = '業種'  selections = {selections}/>
                 <SelectSmall title = '業界'  selections = {selections}/>
                 <SelectSmall title = '時給'  selections = {selections}/>
