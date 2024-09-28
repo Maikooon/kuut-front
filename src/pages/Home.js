@@ -11,8 +11,15 @@ import FrontImageContainer from '../components/layout/FrontImageContainer';
 import EventCard from '../components/mui/eventCard';
 import Search from '../components/mui/search';
 import FAQ from '../components/mui/faq';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
+function Home() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/test'); // 遷移先のパスを指定
+  };
+
 const [tasks, setTasks] = useState([]);
 
   const fetch = async () => {
@@ -100,6 +107,7 @@ const [tasks, setTasks] = useState([]);
           
           </div>
           {/* ここから撮ってきたデータを表示する */}
+          <button onClick={handleNavigate}>Go to About Page</button>
           <div>
             {tasks.length > 0 ? (
               <ul>
@@ -124,4 +132,4 @@ const [tasks, setTasks] = useState([]);
   );
 }
 
-export default App;
+export default Home;

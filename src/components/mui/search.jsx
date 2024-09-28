@@ -42,9 +42,12 @@ function BasicButton() {
 }
 
 
-function CustomizedInputBase() {
-
-
+function CustomizedInputBase({ onSearch}) {
+    const [searchValue, setSearchValue] = useState(''); // 検索キーワードの状態
+    const handleSearch = async (e) => {
+        e.preventDefault(); // フォームのデフォルトの挙動を防ぐ
+        onSearch(searchValue); // 親コンポーネントに検索キーワードを渡す
+    };
     return (
         <div className="input-container">
             <Paper
@@ -58,7 +61,7 @@ function CustomizedInputBase() {
                     borderRadius: '4px'  
                 }}
                 size="small"
-                // onSubmit= {handleSearch}
+                onSubmit={handleSearch}
             >
                 <InputBase
                     sx={{ 
@@ -71,25 +74,23 @@ function CustomizedInputBase() {
                     }}
                     placeholder="キーワードで検索"
                     inputProps={{ 'aria-label': 'キーワードで検索' }}
-                    // value={searchValue}
-                    //ボタンが押された時の挙動を示す
-                    // onChange={(e) => setKeyword(e.target.value)} // 入力を更新
+                    value={searchValue} // 検索キーワードの状態を反映
+                    onChange={(e) => setSearchValue(e.target.value)} // 入力を更新
                 />
                 <IconButton 
                     type="submit" 
                     sx={{ 
-                        p: 0, // アイコンボタンのpaddingをゼロに
+                        p: 0, 
                         backgroundColor: '#283A70', 
                         color: 'white', 
-                        width: '40px', // ボタンの幅を固定
-                        height: '40px', // ボタンの高さを固定
-                        borderTopRightRadius: '4px', // 右上の角を丸める
-                        borderBottomRightRadius: '4px', // 右下の角を丸める
-                        borderTopLeftRadius: '0.1px', // 右上の角を丸める
-                        borderBottomLeftRadius: '0.1px', // 右下の角を丸める
-                        // borderRadius: '4px',
+                        width: '40px', 
+                        height: '40px', 
+                        borderTopRightRadius: '4px', 
+                        borderBottomRightRadius: '4px', 
+                        borderTopLeftRadius: '0.1px', 
+                        borderBottomLeftRadius: '0.1px', 
                         '&:hover': {
-                            backgroundColor: '#303f9f', // ホバー時の色
+                            backgroundColor: '#303f9f', 
                         },
                     }} 
                     aria-label="search"
@@ -137,7 +138,7 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
-function Search () {
+function Search (onSearch) {
     const [searchValue, setSearchValue] = useState("");
 
     const selections = [
@@ -165,4 +166,6 @@ function Search () {
     );
 }
 
-export default Search;
+
+// export default Search;
+export default CustomizedInputBase;
