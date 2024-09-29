@@ -26,9 +26,7 @@ const EventCard = ({ explain }) => {
                     {/* <div class="info">{explain}</div> */}
                     <div class="info">連続起業家の真田 哲弥さんを東大生・慶應生でお迎えしました！</div>
                 </div>
-
             </div>
-
         </>
     );
 }

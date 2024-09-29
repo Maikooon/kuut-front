@@ -21,13 +21,35 @@ function Home() {
     navigate('/test'); // 遷移先のパスを指定
   };
 
-const [tasks, setTasks] = useState([]);
+  // const [tasks, setTasks] = useState([]);
+
+
+  const [companies, setCompanies] = useState([]);
+  const [filteredCompanies, setFilteredCompanies] = useState([]);
+  //実際に検索を行う関数
+    const handleSearch = async (searchKeyword) => {
+      if (!searchKeyword) {
+          console.log("No keyword provided");
+          // setFilteredCompanies(companies);  // If no keyword, show all companies
+          return;
+      }
+      try {
+          const res = await axios.get(`http://localhost:3010/companies?name=${searchKeyword}`);
+          //サーバー側で定義した関数で検索を行い、その結果を取得する
+          setFilteredCompanies(res.data);  // Update the filtered companies list
+          console.log(res.data);  
+      } catch (error) {
+          console.error("Error fetching search results:", error);
+      }
+  };
+
+
 
   const fetch = async () => {
     try {
       const res = await axios.get("http://localhost:3010/companies");
       console.log(res.data);
-      setTasks(res.data);    //task と言う変数にデータが格納された  tasks
+      setCompanies(res.data);    //task と言う変数にデータが格納された  tasks
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -37,6 +59,7 @@ const [tasks, setTasks] = useState([]);
     fetch();
     console.log("useEffect");
   }, []);
+
 
   const title1 = "東大生におすすすめの長期インターン求人";
   const title2 = "イベント・セミナー";
@@ -51,12 +74,12 @@ const [tasks, setTasks] = useState([]);
         <FrontImageContainer />
         <div class="container">
           <Voice />
-          <Search />
+          {/* ここが検索欄 */}
+          <Search onSearch={handleSearch}/>
           <div class="main-text" >
             <p>インターンは初めてでよくわからない...<br />本当にいい経験になるインターンを知りたい...<br />なら東大生の先輩に</p>
             <h2>直接相談!</h2>
           </div>
-
           <TitleBar subindex={title1} />
           <div class="recommend">
             <RecommendCard explain={"wwwwwwwwwwww"} />
@@ -66,7 +89,6 @@ const [tasks, setTasks] = useState([]);
             <RecommendCard explain={"wwwwwwwwwwww"} />
           </div>
           <div class = "search-filter">
-            
             <SearchFilter />
           </div>
 
@@ -116,13 +138,13 @@ const [tasks, setTasks] = useState([]);
           {/* ここから撮ってきたデータを表示する */}
           <button onClick={handleNavigate}>Go to About Page</button>
           <div>
-            {tasks.length > 0 ? (
+            {companies.length > 0 ? (
               <ul>
-                {tasks.map((task, index) => (
+                {companies.map((company, index) => (
                   <li key={index}>
-                    <p>Name: {task.name}</p>
-                    <p>Description: {task.created_at}</p>
-                    <p>ID: {task.id}</p>
+                    <p>Name: {company.name}</p>
+                    <p>Description: {company.created_at}</p>
+                    <p>ID: {company.id}</p>
                   </li>  
                 ))}
               </ul>

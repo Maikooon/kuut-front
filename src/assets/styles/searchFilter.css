@@ -16,16 +16,16 @@
 
 .filtering{
     display: flex;
-    background-color:aquamarine;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap:10%;
-    padding-bottom: 2%;
+    gap:4%;
+    padding-top: 1.6%;
+    padding-bottom: 4%;
 }
 
 .filtering a{
     color: #283A70;  
     margin: 0;
-    font-size: 1.0em;
+    font-size: 0.6em;
     text-decoration: none;
 }

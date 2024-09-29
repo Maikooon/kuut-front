@@ -11,7 +11,7 @@ import './../assets/styles/test.css';
 検索キーワードを更新する関数を持つ関数
 */
 
-function CustomizedInputBase({ onSearch}) {
+function CustomizedInputBase({onSearch}) {
     const [searchValue, setSearchValue] = useState(''); // 検索キーワードの状態
     const handleSearch = async (e) => {
         e.preventDefault(); // フォームのデフォルトの挙動を防ぐ
@@ -123,12 +123,6 @@ const Test = () => {
                     <p>No results found</p>
                 )}
             </ul>
-
-
-            <div class="header-container">
-                <div class="header-left">イベント・セミナー</div>
-                <div class="header-right">もっと見る</div>
-            </div>
 
         </div>
     );

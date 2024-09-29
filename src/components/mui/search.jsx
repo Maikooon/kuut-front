@@ -42,7 +42,7 @@ function BasicButton() {
 }
 
 
-function CustomizedInputBase({ onSearch}) {
+function CustomizedInputBase({onSearch}) {
     const [searchValue, setSearchValue] = useState(''); // 検索キーワードの状態
     const handleSearch = async (e) => {
         e.preventDefault(); // フォームのデフォルトの挙動を防ぐ
@@ -138,7 +138,7 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
-function Search (onSearch) {
+function Search ({onSearch}) {
     const [searchValue, setSearchValue] = useState("");
 
     const selections = [
@@ -152,7 +152,7 @@ function Search (onSearch) {
             {/* 上のブロック */}
             <div className="search-input">
                 <SearchTitle title= "キーワードで探す" />
-                <CustomizedInputBase/>
+                <CustomizedInputBase onSearch={onSearch}/>
             </div>
             {/* 下のブウn */}
             <div className="search-select">
@@ -168,4 +168,4 @@ function Search (onSearch) {
 
 
 // export default Search;
-export default CustomizedInputBase;
+export default Search;
