@@ -12,6 +12,7 @@ import EventCard from '../components/mui/eventCard';
 import Search from '../components/mui/search';
 import FAQ from '../components/mui/faq';
 import { useNavigate } from 'react-router-dom';
+import SearchFilter from '../components/mui/searchFilter';
 
 function Home() {
   const navigate = useNavigate();
@@ -64,12 +65,16 @@ const [tasks, setTasks] = useState([]);
             <RecommendCard explain={"wwwwwwwwwwww"} />
             <RecommendCard explain={"wwwwwwwwwwww"} />
           </div>
+          <div class = "search-filter">
+            
+            <SearchFilter />
+          </div>
 
 
           <TitleBar subindex={title2} />
           <div class="recommend">
-            {/* <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwww"} />
-            <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} /> */}
+            <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwww"} />
+            <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} />
             <EventCard explain={"wwwwwwwwwwww"} />
             <EventCard explain={"aaaaaaaaaa"} />
           </div>
@@ -79,6 +84,8 @@ const [tasks, setTasks] = useState([]);
             <EventCard explain={"wwwwwwwwwwww"} />
             <EventCard explain={"aaaaaaaaaa"} />
           </div>
+          {/* ここから条件での絞り込みを開始する */}
+          
           <div class = "faq-container"> 
             <h2>FAQ</h2>  
             <FAQ 

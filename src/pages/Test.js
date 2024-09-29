@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
+import './../assets/styles/test.css';
 
 /*
 検索キーワードの状態
@@ -14,7 +15,7 @@ function CustomizedInputBase({ onSearch}) {
     const [searchValue, setSearchValue] = useState(''); // 検索キーワードの状態
     const handleSearch = async (e) => {
         e.preventDefault(); // フォームのデフォルトの挙動を防ぐ
-        onSearch(searchValue); // 親コンポーネントに検索キーワードを渡す
+        onSearch(searchValue); // 親コンポーネントに検索キーワードを渡す   関数がこの文字列を保持してくれるということ
     };
     return (
         <div className="input-container">
@@ -122,6 +123,13 @@ const Test = () => {
                     <p>No results found</p>
                 )}
             </ul>
+
+
+            <div class="header-container">
+                <div class="header-left">イベント・セミナー</div>
+                <div class="header-right">もっと見る</div>
+            </div>
+
         </div>
     );
 }

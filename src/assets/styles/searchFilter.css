@@ -1,0 +1,31 @@
+.filter-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid rebeccapurple;
+    padding-top: 2%;
+    padding-bottom: 0.8%;
+}
+
+.filter-container p {
+    color: #333333;  
+    /* font-family:'Yumincho', serif;  */
+    margin: 0;
+    font-size: 1.0em;
+}
+
+.filtering{
+    display: flex;
+    background-color:aquamarine;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:10%;
+    padding-bottom: 2%;
+}
+
+.filtering a{
+    color: #283A70;  
+    margin: 0;
+    font-size: 1.0em;
+    text-decoration: none;
+}

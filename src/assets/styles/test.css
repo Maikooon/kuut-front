@@ -1,0 +1,32 @@
+.header-container {
+    position: relative; /* 子要素の絶対配置の基準にする */
+    background-color: #4A4C55; /* 背景色を設定 */
+    padding: 10px 0; /* 上下に余白を設定 */
+    height: 60px; /* コンテナ全体の高さを指定 */
+}
+
+.header-left {
+    position: absolute;
+    left: 20px; /* 左端に配置 */
+    top: 50%; /* 上から50%に配置して */
+    transform: translateY(-50%); /* 上下方向で中央揃え */
+    color: white; /* フォント色を白に設定 */
+    font-size: 18px; /* フォントサイズを設定 */
+    z-index: 2; /* 前面に表示 */
+    background-color: rebeccapurple;
+}
+
+.header-right {
+    position: absolute;
+    right: 20px; /* 右端に配置 */
+    top: 50%; /* 上から50%に配置 */
+    transform: translateY(-50%); /* 上下方向で中央揃え */
+    color: white;
+    font-size: 14px;
+    z-index: 1; /* 背面に表示 */
+}
+
+.header-right::after {
+    content: '>'; /* 矢印を表示 */
+    margin-left: 5px; /* テキストとの間にスペースを空ける */
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import './../../assets/styles/titleBar.css';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const TitleBar = ({ subindex }) => {
     return (
         <div class="title-bar">
             <p>{subindex}</p>
-            <p>もっと見る</p>
-            {/* <div class="title-link">
-                <a href="localohost:3000">もっと見る </a>
-            </div> */}
+            <div class="title-link">
+                <a href="localohost:3000">もっと見る<ArrowForwardIosIcon/> </a>
+            </div>
         </div>
     );
 }
