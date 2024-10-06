@@ -21,7 +21,10 @@ function Home() {
     navigate('/test'); // 遷移先のパスを指定
   };
 
-  // const [tasks, setTasks] = useState([]);
+  const toCompanyPage = () => {
+    navigate('/companyDetail'); // 遷移先のパスを指定
+  };
+
 
 
   const [companies, setCompanies] = useState([]);
@@ -137,6 +140,7 @@ function Home() {
           </div>
           {/* ここから撮ってきたデータを表示する */}
           <button onClick={handleNavigate}>Go to About Page</button>
+          <button onClick={toCompanyPage}>Go to Company Page</button>
           <div>
             {companies.length > 0 ? (
               <ul>

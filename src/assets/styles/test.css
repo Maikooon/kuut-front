@@ -18,8 +18,8 @@
 
 .header-right {
     position: absolute;
-    right: 20px; /* 右端に配置 */
-    top: 50%; /* 上から50%に配置 */
+    right: 20px; 
+    top: 50%; 
     transform: translateY(-50%); /* 上下方向で中央揃え */
     color: white;
     font-size: 14px;
@@ -29,4 +29,62 @@
 .header-right::after {
     content: '>'; /* 矢印を表示 */
     margin-left: 5px; /* テキストとの間にスペースを空ける */
+}
+
+
+
+
+/* Swiperコンテナの基本スタイル */
+swiper-container {
+    width: 100%;
+    height: 36vh;
+    display: block;
+    overflow: hidden; /* スライダーの範囲外を隠す */
+    margin:0; 
+    padding-bottom: 2%;
+}
+
+swiper-button-next,
+swiper-button-prev {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+    width: 3px;
+    height: 3px;
+    font-size: 20px;  /* アイコンのサイズを変更する場合 */
+
+}
+
+  /* スライドのスタイル */
+swiper-slide {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: tan; 
+    margin: 0;
+    /* padding: 0.4vw; */
+    padding-top: 0%;
+}
+
+
+.checkArea {
+    height: 1rem * 1.5;
+}
+.scrollArea {
+    border: dotted #ccc 1px;
+    width: 200px;
+    height: 150px;
+    overflow: scroll;
+}
+.targetArea {
+margin: 200px auto;
+width: 140px;
+height: 100px;
+background-color: #f00;
+
+display: flex;
+justify-content:center;
+align-items:center;
 }

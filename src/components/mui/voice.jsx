@@ -1,7 +1,11 @@
 import { React,useState } from 'react';
 import './../../assets/styles/voiceCard.css';
 import Rating from '@mui/material/Rating';
-import ',/../assets/styles/test.css';
+import './../../assets/styles/test.css';
+
+import { register } from "swiper/element/bundle";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const VoiceCard = ({company,belong,rank, text}) => {
     // const [value, setValue] = useState();
@@ -22,10 +26,14 @@ const VoiceCard = ({company,belong,rank, text}) => {
                 <div class="comment">
                     {text}
                 </div>
+            <br/>
+            <br/>
             </div>
         </>
     );
 }
+
+register();
 
 const Voice = () => {
     const data = [
@@ -62,7 +70,7 @@ const Voice = () => {
     ];
     return (
         <>
-            <div class="voice-container">
+            {/* <div class="voice-container">
                 
                 {data.map((data) =>
                     <VoiceCard  
@@ -73,7 +81,30 @@ const Voice = () => {
                     )
                 }
                 
-            </div>
+            </div> */}
+            <swiper-container style={
+                    {
+                    "--swiper-navigation-color": "#fff", 
+                    "--swiper-pagination-color": "#fff"
+                    }
+                } 
+                pagination-clickable="true" 
+                // navigation="true" 
+                className="mySwiper"
+                slides-per-view={4}
+            >
+                {data.map((data) =>
+                    <swiper-slide lazy="true">
+                        <VoiceCard  
+                            company={data.company} 
+                            belong={data.belong} 
+                            rank={data.rank}    
+                            text={data.text}/>
+                    </swiper-slide>
+                )}
+    
+                
+            </swiper-container>
         </>
     )
 }

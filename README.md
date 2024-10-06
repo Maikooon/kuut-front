@@ -71,3 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 npm i --save material-ui-search-bar@beta
 npm install react-router-dom --save
+npm i swiper
+
+yarn add react-intersection-observer
