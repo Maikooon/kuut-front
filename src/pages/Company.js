@@ -114,7 +114,9 @@ const CompanyInfo = () => {
     );
 }
 
-const IndexCard = ({ explain }) => {
+
+
+const Company = () => {
     const [isIntersecting,setIsIntersecting] = useState(false);
     const scrollAreaRef = useRef(null);
     const targetAreaRef = useRef(null);
@@ -139,27 +141,6 @@ const IndexCard = ({ explain }) => {
           if (targetArea) observerObject.unobserve(targetArea);
         };
       }, []);
-
-    return  (
-        <div class="card">
-                        <div class="tabs">
-                            <div class="tab" id="tab1">インターン概要</div>
-                            <div class="tab" id="tab2">会社情報</div>
-                        </div>
-                        <button class="favorite-button">
-                            ❤️ お気に入りに追加する
-                        </button>
-                        <button class="apply-button">
-                            応募する
-                        </button>
-                    </div>
-    )
-
-}
-
-
-const Company = () => {
-    
     
     
     return (
@@ -170,10 +151,6 @@ const Company = () => {
             <body>
                 <div class="company">
                     <div class = "detail-section">
-                        {/* <section
-                            id="detail-section"
-                            className={activeSection === 'detail-section' ? 'active-section' : ''} // Apply dynamic class based on active section
-                        > */}
                             <DetailTitle/>
                             <ImageBox/>
                             <div class = "intern">
@@ -184,16 +161,34 @@ const Company = () => {
                             <SubTitle title="　仕事内容"/>
                             <SubTitle title="　仕事内容"/>
                             <Requirements/>
+                            <div class="buttons">
+                                <button class="favorite-button">
+                                ❤️ お気に入りに追加する
+                                </button>
+                                <button class="apply-button">
+                                    応募する
+                                </button>
+                            </div>
+                        <div id = "targetArea" ref={targetAreaRef}>
                             <CompanyInfo/>
-                        {/* </section> */}
-                        {/* <section
-                            id="company-section"
-                            className={activeSection === 'company-section' ? 'active-section' : ''} // Apply dynamic class based on active section
-                        > */}
-                            <CompanyInfo/>
-                        {/* </section> */}
+                        </div>
                     </div>
-                    <IndexCard/>
+                    <div class="card">
+                        <div class="tabs">
+                            <div id="checkArea" style={{color: isIntersecting ? "#9C9C9C": '#E84338',borderLeft: isIntersecting ? 'none' : '4px solid #E84338'}}>
+                                インターン概要 
+                            </div>
+                            <div id="checkArea" style={{color: isIntersecting ? "#E84338": '#9C9C9C' ,borderLeft: isIntersecting ? '4px solid #E84338' : 'none'}}>
+                                会社情報 
+                            </div>
+                        </div>
+                        <button class="favorite-button">
+                            ❤️ お気に入りに追加する
+                        </button>
+                        <button class="apply-button">
+                            応募する
+                        </button>
+                    </div>
                 </div>
             </body>
         </html>
