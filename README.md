@@ -74,3 +74,4 @@ npm install react-router-dom --save
 npm i swiper
 
 yarn add react-intersection-observer
+npm i @line/liff

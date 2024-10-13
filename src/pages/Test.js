@@ -210,7 +210,7 @@ const ScrollObserver = () => {
       if (!searchKeyword) return;
   
       try {
-        const res = await axios.get(`http://localhost:3010/companies?name=${searchKeyword}`);
+        const res = await axios.get(`http://localhost:3010/?name=${searchKeyword}`);
         setFilteredCompanies(res.data); 
       } catch (error) {
         console.error("Error fetching search results:", error);
