@@ -141,7 +141,7 @@ function Home() {
           {/* ここから撮ってきたデータを表示する */}
           <button onClick={handleNavigate}>Go to About Page</button>
           <button onClick={toCompanyPage}>Go to Company Page</button>
-          <button onClick={toGooglePage}>Go to Google Page</button>
+          {/* <button onClick={toGooglePage}>Go to Google Page</button> */}
           <div>
             {companies.length > 0 ? (
               <ul>

@@ -185,7 +185,230 @@ const ScrollObserver = () => {
       </div>
     );
   };
+
+  const ContactForm = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [sex, setSex] = useState('');
+    const [address, setAddress] = useState("");
+    const [phone, setPhone] = useState("");
+    const [collage, setCollage] = useState("");
+    const [major, setMajor] = useState("");
+    const [submajor, setSubmajor] = useState("");
+    const [graduation, setGraduation] = useState("");
+    const [showForm, setShowForm] = useState(true);
   
+    const handleSubmit = async (e) => {
+      e.preventDefault(); // デフォルトのフォーム送信を防ぐ
+  
+      const submitParams = new FormData();
+      submitParams.append("entry.364926296", name);
+      submitParams.append("entry.1330492735", email);
+      console.log(sex);
+      submitParams.append("entry.1296597994", sex);
+      submitParams.append("entry.1902996541", address);
+      submitParams.append("entry.1437423053", phone);
+      submitParams.append("entry.500636183", collage);
+      submitParams.append("entry.1872279197", major);
+      submitParams.append("entry.1842775767", submajor);
+      submitParams.append("entry.38483767", graduation);
+
+  
+      // CORSエラー対策
+      const FORM_URL = "http://localhost:3010/contact";
+  
+      try {
+        axios.post(FORM_URL, submitParams)
+          .then(response => {
+            console.log("送信成功:", response.data);
+          })
+          .catch(error => {
+            console.error("フォーム送信エラー:", error);
+          });
+        
+      } catch (error) {
+        console.error("フォーム送信エラー:", error);
+      }
+    };
+  
+    return (
+      <div className="webform">
+        {showForm ? (
+          <form onSubmit={handleSubmit}>
+            {/* Name Field */}
+            <label htmlFor="name">氏名</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="お気軽にお問い合わせください。"
+              required
+            />
+  
+            {/* Email Field */}
+            <label htmlFor="email">メールアドレス</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="example@mail.co.jp"
+              required
+            />
+
+
+            {/* sex */}
+            <label htmlFor="sex">性別</label>
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="sex"
+                value="male"
+                checked={sex === "male"}
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <label htmlFor="male">男性</label>
+
+              <input
+                type="radio"
+                id="female"
+                name="sex"
+                value="female"
+                checked={sex === "female"}
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <label htmlFor="female">女性</label>
+
+              <input
+                type="radio"
+                id="other"
+                name="sex"
+                value="other"
+                checked={sex === "other"}
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <label htmlFor="other">その他</label>
+            </div>
+
+            {/* address */}
+            <label htmlFor = "address">住所</label>
+            <input
+              type="text"
+              id="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              placeholder="住所を入力してください"
+              required
+            />
+
+            {/* phone */}
+            <label htmlFor="phone">電話番号</label>
+            <input
+              type="text"
+              id="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="090-1234-5678"
+              required
+            />
+
+
+            {/* collage */}
+            <label htmlFor="collage">大学名</label>
+            <input
+              type="text"
+              id="collage"
+              value={collage}
+              onChange={(e) => setCollage(e.target.value)}
+              placeholder="大学名を入力してください"
+              required
+            />
+
+            {/* major */}
+            <label htmlFor="major">学部</label>
+              <input
+                type="text"
+                id="major"
+                value={major}
+                onChange={(e) => setMajor(e.target.value)}
+                placeholder="専攻を入力してください"
+                required
+              />
+              
+
+              {/* submajor */}
+              <label htmlFor="submajor">学科</label>
+              <input
+                type="text"
+                id="submajor"
+                value={submajor}
+                onChange={(e) => setSubmajor(e.target.value)}
+                placeholder="副専攻を入力してください"
+              />
+                
+            {/* graduation */}
+            <label htmlFor="graduation">卒業年度</label>
+            <div>
+              <input
+                type="radio"
+                id="graduation-2024"
+                name="graduation"
+                value={graduation}
+                checked={graduation === "2024"}
+                onChange={(e) => setGraduation(e.target.value)}
+              />
+              <label htmlFor="graduation-2024">2024</label>
+
+              <input
+                type="radio"
+                id="graduation-2025"
+                name="graduation"
+                value={graduation}
+                checked={graduation === "2025"}
+                onChange={(e) => setGraduation(e.target.value)}
+              />
+              <label htmlFor="graduation-2025">2025</label>
+
+              <input
+                type="radio"
+                id="graduation-2026"
+                name="graduation"
+                value={graduation}
+                checked={graduation === "2026"}
+                onChange={(e) => setGraduation(e.target.value)}
+              />
+              <label htmlFor="graduation-2026">2026</label>
+
+              <input
+                type="radio"
+                id="graduation-2027"
+                name="graduation"
+                value={graduation}
+                checked={graduation === "2027"}
+                onChange={(e) => setGraduation(e.target.value)}
+              />
+              <label htmlFor="graduation-2027">2027</label>
+            </div>
+
+                
+            {/* Submit Button */}
+            <button type="submit">送信</button>
+          </form>
+        ) : (
+          <p>送信が完了しました。ありがとうございます！</p>
+        )}
+      </div>
+    );
+  };
+  
+  
+
+  
+
+
+
   // Test Component
   const Test = () => {
     const [companies, setCompanies] = useState([]); 
@@ -238,9 +461,16 @@ const ScrollObserver = () => {
         {/* Usage and ScrollObserver */}
         <Usage />
         <ScrollObserver />
+        
+        <ContactForm />
       </div>
     );
   };
+ /* The above code is using the axios library to make a POST request to a Google Form action
+ URL. It is sending the submitParams data as the request body. The CORS_PROXY variable is
+ likely used to handle any cross-origin resource sharing issues that may arise when making
+ the request. */
+//  
 
 
 
@@ -307,7 +537,6 @@ const ScrollObserver = () => {
 
 
 //         </div>
-//     );
-// }
-
+//     );https://docs.google.com/forms/u/0/d/e/1FAIpQLScFcm8jWXeF5vGQwa0yFw0d5rrXTH4N3RpjcWzZnV78RAZSVA/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc" data-shuffle-seed="-5845824785139489016" data-clean-viewform
+// }<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScFcm8jWXeF5vGQwa0yFw0d5rrXTH4N3RpjcWzZnV78RAZSVA/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc" data-shuffle-seed="-5845824785139489016" data-clean-viewform-url="https://docs.google.com/forms/d/e/1FAIpQLScFcm8jWXeF5vGQwa0yFw0d5rrXTH4N3RpjcWzZnV78RAZSVA/viewform" data-response="%.@.]" data-dlp-data="%.@.null,false]" data-first-entry="0" data-last-entry="2" data-is-first-page="true">
 export default Test;
