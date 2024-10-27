@@ -17,6 +17,7 @@ import SearchFilter from '../components/mui/searchFilter';
 function Home() {
   const navigate = useNavigate();
 
+  //新しいページに遷移する時にはここに追記
   const handleNavigate = () => {
     navigate('/test'); // 遷移先のパスを指定
   };
@@ -24,6 +25,9 @@ function Home() {
   const toCompanyPage = () => {
     navigate('/companyDetail'); // 遷移先のパスを指定
   };
+  const toContactForm = () => {
+    navigate('/contact'); // 遷移先のパスを指定
+  }
 
 
 
@@ -141,6 +145,7 @@ function Home() {
           {/* ここから撮ってきたデータを表示する */}
           <button onClick={handleNavigate}>Go to About Page</button>
           <button onClick={toCompanyPage}>Go to Company Page</button>
+          <button onClick={toContactForm}>Go to Contact Form</button>
           {/* <button onClick={toGooglePage}>Go to Google Page</button> */}
           <div>
             {companies.length > 0 ? (
