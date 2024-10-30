@@ -9,6 +9,7 @@ import AccessTime from '@mui/icons-material/AccessTime';
 import Train from '@mui/icons-material/Train';
 import frontImage from './../assets/images/front-image.png';
 import logo from './../assets/images/image.png';
+import CustomLectangleButton from "../components/mui/CustomLectangleButton";
 
 
 
@@ -22,6 +23,7 @@ const DetailTitle = () => {
 }
 
 
+// はじめの部分の詳細
 const ImageBox = () => {
     return (
         <div class="image-box">
@@ -59,19 +61,7 @@ const SubTitle = ({ title }) => {
 }
 
 
-
-const RequireInfo = ({ title, explain }) => {
-    return (
-        <>
-            <div class="requirement-detail">
-                    <div class="requirement-title">
-                        <p>{title}</p>
-                    </div>
-                    <p>{explain}</p>
-            </div>
-        </>
-    );
-}
+// 募集要項///////////////////////////////////////////
 const Requirements = () => {
     return (
         <div class="requirement">
@@ -88,32 +78,47 @@ const Requirements = () => {
     );
 }
 
+const RequireInfo = ({ title, explain }) => {
+    return (
+        <>
+            <div class="requirement-detail">
+                    <div class="requirement-title">
+                        <p>{title}</p>
+                    </div>
+                    <p>{explain}</p>
+            </div>
+        </>
+    );
+}
+// ここまで
+
+// 会社概要///////////////////////////////////////////
 const CompanyInfo = () => {
     return (
         <div class="company-information">
             <p>会社概要</p>
-            <div class="company-information-title-bar">
-                <div class= "company-info-detail">
-                    <h3>設立</h3>
-                    <p>2010年</p>
-                </div>
-                <div class= "company-info-detail">
-                    <h3>設立</h3>
-                    <p>2010年</p>
-                </div>
-                <div class= "company-info-detail">
-                    <h3>設立</h3>
-                    <p>2010年</p>
-                </div>
-                <div class= "company-info-detail">
-                    <h3>設立</h3>
-                    <p>2010年</p>
-                </div>
+            <div class = "matrix">
+                <CompanyInfoDetail title="設立" explain="2010年"/>
+                <CompanyInfoDetail title="設立" explain="2010年"/>
+                <CompanyInfoDetail title="設立" explain="2010年"/>
+                <CompanyInfoDetail title="設立" explain="2010年"/>
             </div>
         </div>
     );
 }
-
+const CompanyInfoDetail = ({title, explain}) => {
+    return(
+        <div class= "company-info-detail">
+            <div class='title' >
+                {title}
+            </div>
+            <div class='explain' >
+                {explain}
+            </div>
+        </div>
+    )
+}
+// ここまで
 
 
 const Company = () => {
@@ -151,9 +156,11 @@ const Company = () => {
             <body>
                 <div class="company">
                     <div class = "detail-section">
+                        <div class='detail-section-upper'>
                             <DetailTitle/>
                             <ImageBox/>
                             <div class = "intern">
+                                {/* <p>イメージを入れる</p> */}
                                 <img src= {logo} alt="company-image" />
                                 <p>インターン概要</p>
                             </div>
@@ -165,10 +172,9 @@ const Company = () => {
                                 <button class="favorite-button">
                                 ❤️ お気に入りに追加する
                                 </button>
-                                <button class="apply-button">
-                                    応募する
-                                </button>
+                                <CustomLectangleButton text="応募する"/>
                             </div>
+                        </div>
                         <div id = "targetArea" ref={targetAreaRef}>
                             <CompanyInfo/>
                         </div>

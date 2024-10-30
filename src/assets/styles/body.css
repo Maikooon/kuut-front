@@ -1,6 +1,12 @@
 /* bodyのPadding とか色とかを指定する */
 
 
+/* フォントの指定 */
+@font-face {
+    font-family: 'Yumincho';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+}
+
 .header{
     font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
 }
