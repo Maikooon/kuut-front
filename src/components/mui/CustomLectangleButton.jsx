@@ -1,11 +1,9 @@
-// ここでよく使用するボタンを定義する
-
 import React from "react";
 import "./../../assets/styles/button/customLectangleButton.css";
 
-const CustomLectangleButton = ({ text, onClick }) => {
+const CustomLectangleButton = ({ text, onClick, width}) => {
     return (
-      <button className="styled-button" onClick={onClick}>
+      <button class="lectangle-styled-button" onClick={onClick} style={{ width: width }}>
         {text}
       </button>
     );
@@ -13,3 +11,6 @@ const CustomLectangleButton = ({ text, onClick }) => {
   
 
 export default CustomLectangleButton;
+
+
+//TODO'カスタムボタンがうまくいかない

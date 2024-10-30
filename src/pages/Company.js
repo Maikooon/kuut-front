@@ -24,6 +24,7 @@ const DetailTitle = () => {
 
 
 // はじめの部分の詳細
+
 const ImageBox = () => {
     return (
         <div class="image-box">

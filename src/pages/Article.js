@@ -9,6 +9,7 @@ const ArticleCard = () => {
     return (
         <div class="article-card">
             <div class="article-card-img">
+
                 {/* <img src={ArticleImage} alt="article-image"  /> */}
             </div>
             <div class="article-card-text">
@@ -23,7 +24,26 @@ const ArticleCard = () => {
     );
 }
 
+const Card = ({ title, subtitle, image, description, date }) => {
+  return (
+    <div className="card">
+      <div className="card-image">
+        <img src={image} alt={title} />
+      </div>
+      <div className="card-content">
+        <h3 className="card-title">{title}</h3>
+        <p className="card-subtitle">{subtitle}</p>
+        <p className="card-description">{description}</p>
+        <p className="card-date">{date}</p>
+      </div>
+    </div>
+  );
+};
+
+
+
 const Article = () => {
+
     return (
         <html>
             <header>
@@ -35,7 +55,9 @@ const Article = () => {
                     {/* ここから一列にカードを並べる */}
                     <ArticleCard />
                     <ArticleCard />
+                  
                 </div>
+                
             </body>
             <footer>
                 <Footer/>
