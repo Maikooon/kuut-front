@@ -3,14 +3,14 @@ import axios from "axios";
 import '../assets/styles/App.css';
 import Header from '../components/layout/header';
 import Voice from "../components/mui/voice";
-import TitleBar from '../components/mui/titleBar';
+import TitleBar from '../components/home/titleBar';
 import Footer from '../components/layout/footer';
 import '../assets/styles/body.css';
 import RecommendCard from '../components/mui/recommendCard';
 import FrontImageContainer from '../components/layout/FrontImageContainer';
 import EventCard from '../components/mui/eventCard';
 import Search from '../components/mui/search';
-import FAQ from '../components/mui/faq';
+import FAQ from '../components/home/faq';
 import { useNavigate } from 'react-router-dom';
 import SearchFilter from '../components/mui/searchFilter';
 
@@ -25,10 +25,19 @@ function Home() {
   const toCompanyPage = () => {
     navigate('/companyDetail'); // 遷移先のパスを指定
   };
+
   const toContactForm = () => {
     navigate('/contact'); // 遷移先のパスを指定
   }
 
+    //新しいページに遷移する時にはここに追記
+    const handleEventSeminer = () => {
+      navigate('/eventSeminer'); // 遷移先のパスを指定
+    };
+    //新しいページに遷移する時にはここに追記
+    const handleArticle = () => {
+      navigate('/article'); // 遷移先のパスを指定
+    };
 
 
   const [companies, setCompanies] = useState([]);
@@ -87,7 +96,7 @@ function Home() {
             <p>インターンは初めてでよくわからない...<br />本当にいい経験になるインターンを知りたい...<br />なら東大生の先輩に</p>
             <h2>直接相談!</h2>
           </div>
-          <TitleBar subindex={title1} />
+          <TitleBar subindex={title1} nextPage={handleEventSeminer}/>
           <div class="recommend">
             <RecommendCard explain={"wwwwwwwwwwww"} />
             <RecommendCard explain={"wwwwwwwwwwww"} />
@@ -100,7 +109,7 @@ function Home() {
           </div>
 
 
-          <TitleBar subindex={title2} />
+          <TitleBar subindex={title2} nextPage={handleEventSeminer}/>
           <div class="recommend">
             <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwww"} />
             <EventCard explain={"wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"} />
@@ -108,7 +117,7 @@ function Home() {
             <EventCard explain={"aaaaaaaaaa"} />
           </div>
 
-          <TitleBar subindex={title3} />
+          <TitleBar subindex={title3} nextPage={handleArticle} />
           <div class="recommend">
             <EventCard explain={"wwwwwwwwwwww"} />
             <EventCard explain={"aaaaaaaaaa"} />

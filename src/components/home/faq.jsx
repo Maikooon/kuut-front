@@ -1,5 +1,5 @@
 import React from "react";
-import "./../../assets/styles/faq.css";
+import "./../../assets/styles/home/faq.css";
 
 const FaqLOGO = ({text,color}) => {
     return (
