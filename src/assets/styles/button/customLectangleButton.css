@@ -1,0 +1,19 @@
+
+.styled-button {
+    width: 300px;
+    padding: 1% 1.2%;
+    border-radius: 16px; /* ボタンの丸み */
+    background: #19539E; /* グラデーション */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ボタンの影 */
+  }
+  
+  .styled-button:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* ホバー時の影 */
+    transform: translateY(-2px); /* ホバー時に少し浮かせる */
+  }
+  
