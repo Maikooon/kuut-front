@@ -10,7 +10,7 @@ import Train from '@mui/icons-material/Train';
 import frontImage from './../assets/images/front-image.png';
 import logo from './../assets/images/image.png';
 import CustomLectangleButton from "../components/mui/CustomLectangleButton";
-
+import WOLF from './../assets/images/wolf.png';
 
 
 const DetailTitle = () => {
@@ -28,7 +28,7 @@ const DetailTitle = () => {
 const ImageBox = () => {
     return (
         <div class="image-box">
-            <img src={frontImage} alt="company-image" />
+            <img src={WOLF} alt="company-image" />
             <div class="image-info">
                 <div class = "info-detail">
                     <Work/>
