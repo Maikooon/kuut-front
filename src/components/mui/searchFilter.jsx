@@ -22,7 +22,7 @@ const SearchFilter = ({title}) => {
             <div class="filtering">
                 {data.map((item)=> (
                     <a key ={item.id} href={item.link}>
-                        > {item.name}
+                        {item.name}
                     </a>
                 ))}
             </div>

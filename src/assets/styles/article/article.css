@@ -1,0 +1,17 @@
+.article{
+    padding: 4vw 16vw;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.article h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 題名サイズはこれ */
+    font-size: 1.6em;   
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}

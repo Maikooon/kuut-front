@@ -1,3 +1,4 @@
+/* インターンのタイトルを設定する */
 .detail-title
 {
     display: flex;
@@ -21,6 +22,7 @@
     font-size: 2.4em;
 }
 
+/* 次のイメージ画像などを入れる */
 .image-box{
     background-color: antiquewhite;
     display: flex;
@@ -55,6 +57,31 @@
     gap: 2%;
 }
 
+
+/* ここからインターン概要に移る */
+.intern{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* align-items: center; */
+    gap: 2%;
+    height: 8%;
+}
+
+.intern img{
+    padding: 0.4%;
+    height: 12%;
+    width: 12%;
+}
+
+.intern p{
+    font-size:2.4em;
+    font-weight: bold;
+    color: #0A05FF;
+    margin: 0;
+}
+
+/* それぞれのインデックスを定める */
 .sub-title{
     display: flex;
     flex-direction: column;
@@ -64,7 +91,7 @@
 
 .sub-title h3{
     margin : 0;
-    font-size: 2.4em;
+    font-size: 2.0em;
     border-left: 3px solid #000F97;
 }
 
@@ -80,35 +107,20 @@
 }
 
 .detail-section{
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 80%;
     padding: 2% 4%;
     gap: 2%;
-
 }
 
-.intern{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* align-items: center; */
-    gap: 2%;
-    height: 8%;
-    /* background-color: aliceblue; */
+.detail-section-upper{
+    padding: 4% 4%;
+    /* border: 1px solid #888888; */
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.1); /* 影の設定 */
 }
 
-.intern img{
-    padding: 0.4%;
-    height: 80%;
-}
 
-.intern p{
-    font-size: 2.6em;
-    font-weight: bold;
-    color: #0A05FF;
-    margin: 0;
-}
-
+/* 募集要項 */
 .requirement{
     display: flex;
     flex-direction: column;
@@ -129,21 +141,18 @@
 
 .requirement-title-bar p{
     margin : 0;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #ffffff;
     font-weight: bold;
 }
 
-
-
 .requirement-detail{
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: centえr;
     padding: 0.4% 4%;
     border-bottom: 1px dashed #888888;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .requirement-title{
@@ -153,39 +162,40 @@
 }
 
 .requirement-title p{
-    font-size: 1em;
+    font-size: 1.2em;
 }
-
-
 
 .requirement-title-bar p{
     margin : 0;
     font-size: 1.2em;
     padding: 1.2% 4%;
 }
+/* ここまで募集要項 */
 
-
+/* ここから会社概要 */
 .company-information{
     display: flex;
+    /* background-color: aliceblue; */
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 0% ;
+    padding: 2% 6%;
+    border-top: #888888;
+    border-bottom: #888888;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.08); /* 影の設定 */
 }
 
 .company-information p{
-    font-size: 1.6em;
+    font-size: 2.0em;
     font-weight: bold;
+    /* margin: 4%; */
 }
 
-.company-information-title-bar{
+.company-information .matrix{
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding: 0% 4%;
 }
 
 .company-info-detail{
@@ -193,29 +203,33 @@
     flex-direction: row;
     align-items: left;
     justify-content: left;
-    width: 70%;
-    border-bottom: 1px solid #888888;
-}
-
-
-.company-info-detail h3{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    align-items: center;
-    justify-content: left;
-    padding: 0% 4%;
-    background-color: #888888;
     margin: 0;
-    font-weight: normal;
+    padding: 0;
+    border-bottom: 1px solid #888888;
+    border-top: 1px solid #888888;
 }
-.company-info-detail p{
+
+.company-info-detail .title{
+    width: 20%;
+    display: flex;
+    justify-content: left;
+    background-color: #B8B8B8;
+    padding: 2% 2%;
+    margin: 0;
+}
+
+.company-info-detail .explain{
+    /* background-color: aqua; */
+    width: 70%;
     font-size: 1em;
     padding: 0% 4%;
     font-weight: normal;
-    /* margin: 0; */
+    margin: 0;
+    padding: 2% 2%;
 }
+/* ここまで概要 */
 
+/* ここから横のボタン */
 .buttons{
     width: 70%;
     display: flex;
@@ -249,7 +263,7 @@
 }
 
 
-/* /// */
+/* ここからインデックスナビ */
 
 .index-list{
     background-color: chocolate;
@@ -261,7 +275,7 @@
     position: sticky;
     top: 16%;
     height: fit-content;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -291,7 +305,7 @@
     padding: 4% 4%;
     padding-left: 6%;
     gap: 2%;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 4%;
@@ -331,3 +345,8 @@ background-color: #ffebeb;
     background-color: #0056b3;
 }
 
+
+
+.targetArea{
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.1); /* 影の設定 */
+}
