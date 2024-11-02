@@ -4,6 +4,7 @@ import Footer from '../components/layout/footer';
 import ArticleImage from './..//assets/images/article/image.png';
 import './../assets/styles/article/articleDetailExperience.css';
 import Experience from './../assets/images/article/experience.png';
+import CustomLectangleButton from '../components/mui/CustomLectangleButton';
 
 
 const DetailText = () => {
@@ -34,8 +35,12 @@ teethへ入社を決めました。</p>
                 <h3>ーーどうやってOh my teethを探しましたか？</h3>
                     <p>qjjjjjjjjjj</p>
             </div>
+            <div class = "article-detail-detail-join-company">
+                この記事を書いた人
+                <div class='speaker'>ここに書いた人のパネルが入るこれ本当にいるのか？</div>
+            </div>
 
-            ここにボタン
+            <CustomLectangleButton text="記事一覧へ戻る" />
         </div>
     );
 }
