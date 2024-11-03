@@ -1,19 +1,30 @@
 import React from "react";
-import Header from "../components/layout/header";
+import Headers from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import SearchEngineDetail from '../components/mui/searchEngineDetail';
-import "../assets/styles/search.css";
+import "../assets/styles/search/searchPage.css";
+
+
 
 const Search = () => {
     return (
-        <div>
-            <Header />
-            <h1>Search</h1>
-            <SearchEngineDetail />
-
-            ここに検索バーが入る
-            <Footer />
-        </div>
+        <html>
+            <header>
+                <Headers />
+            </header>
+            <body>
+                <div class="search-page-container">
+                    <SearchEngineDetail />
+                    <div class="search-page-result-content">
+                        検索結果
+                        でできた結果をカードに入れて表示す流ことを行う
+                    </div>
+                </div>
+            </body>
+            <footer>
+                <Footer />
+            </footer>
+        </html>
     );
 }
 

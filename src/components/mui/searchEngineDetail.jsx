@@ -9,24 +9,19 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import BusinessIcon from '@mui/icons-material/Business';
+import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
+import TrainIcon from '@mui/icons-material/Train';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 
-
-
-//searchに関する文字たち
-const SearchTitle = ({title}) =>{
-    return(
-        <div className="search-title">
-            <p>{title}</p>
-        </div>
-    );
-}
 
 function BasicButton() {
     return (
         <Button 
             variant="contained" 
             sx={{ 
-                width : "90%",
+                width : "100%",
                 backgroundColor: '#283A70',  // 背景色
                 fontSize: '18px',            // 文字の大きさ
                 fontFamily: 'Yumincho',  // フォント    
@@ -103,9 +98,8 @@ function CustomizedInputBase({onSearch}) {
 }
 
 
-
 //選択ボックスコンポーネント
-const  SelectSmall = ({title,selections}) => {
+const  SelectSmall = ({icon,title,selections}) => {
         const [age, setAge] = React.useState('');
     
         const handleChange = (event) => {
@@ -113,15 +107,29 @@ const  SelectSmall = ({title,selections}) => {
         };
         return (
         <div className = "select-set">
-            <p>{title}</p>
-            <FormControl sx={{ min: 1, minWidth: '80%' ,background:"#ffffff"}} size="small">
-                <InputLabel id="demo-select-small-label">-</InputLabel>
+            {/* 残った広さがこちらに分配される */}
+            <div class="search-title-box">
+                <div class="search-title-box-icon">
+                    {icon && React.createElement(icon)}
+                </div>
+                <p>{title}</p>
+            </div>
+            <FormControl sx={{ min: 1, minWidth: '95%' ,height:'60px',background:"#ffffff",padding:'0' ,margin:'0'}} size="small">
+                {/* <InputLabel id="demo-select-small-label">-</InputLabel> */}
                 <Select
-                // labelId="demo-select-small-label"
-                id="demo-select-small"
-                value={age}
-                onChange={handleChange}
-                >
+                    // labelId="demo-select-small-label"
+                    id="demo-select-small"
+                    value={age}
+                    onChange={handleChange}
+                    fullWidth  // Selectの幅をFormControlの幅に合わせる
+                    sx={{
+                        borderWidth: '0px',  // Selectのボーダーの太さを設定
+                        height: '100%',  // Selectの高さを親要素に合わせる
+                        '& .MuiOutlinedInput-notchedOutline': {
+                            border:'none',  // Selectのボーダーの太さを設定
+                        },
+
+                }}>
                 <MenuItem value="">
                     <em>None</em>
                 </MenuItem>
@@ -138,6 +146,8 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
+
+
 function SearchEngineDetail ({onSearch}) {
     const [searchValue, setSearchValue] = useState("");
 
@@ -148,18 +158,16 @@ function SearchEngineDetail ({onSearch}) {
     ];
 
     return (
-        <div className="search-container">
-            {/* 上のブロック */}
-            <div className="search-input">
-                <SearchTitle title= "キーワードで探す" />
-                <CustomizedInputBase onSearch={onSearch}/>
-            </div>
+        <div className="search-detail-container">
             {/* 下のブウn */}
-            <div className="search-select">
-                <SelectSmall title = '業種'  selections = {selections}/>
-                <SelectSmall title = '業界'  selections = {selections}/>
-                <SelectSmall title = '時給'  selections = {selections}/>
-                <SelectSmall title = '場所'  selections = {selections}/>
+            <div className="search-detail-select">
+                <SelectSmall icon={BusinessCenterIcon} title = '業種'  selections = {selections}/>
+                <div class="border"></div>
+                <SelectSmall icon={BusinessIcon}  title = '業界'  selections = {selections}/>
+                <div class="border"></div>
+                <SelectSmall icon={CurrencyYenIcon} title = '時給'  selections = {selections}/>
+                <div class="border"></div>
+                <SelectSmall icon={TrainIcon} title = '場所'  selections = {selections}/>
             </div>
             <BasicButton />
         </div>
