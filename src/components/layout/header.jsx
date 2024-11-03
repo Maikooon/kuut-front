@@ -25,12 +25,12 @@ const Nav = () => {
 const UserActions = () => {
     return (
         <div class = "user-actions">
-            <Stack direction="row" spacing={'2.4vw'} >
-                <Button variant="outlined" startIcon={<ArrowForwardIosIcon />} sx={{ color: "#fff", borderColor: '#fff', fontSize:'1.0vw'}} >
+            <Stack direction="row" spacing={'1em'} >
+                <Button variant="outlined" startIcon={<ArrowForwardIosIcon />} sx={{ color: "#fff", borderColor: '#fff', fontSize:'0.4em'}} >
                     企業様はこちらから
                 </Button>
-                <Button color="#fff"  startIcon={<PersonIcon />} sx={{ color: "#fff",outlineColor:'#fff',fontSize:'1.0vw'}} >新規登録</Button>
-                <Button color="secondary"  startIcon={<LoginIcon />} sx={{ color: "#fff",outlineColor:'#fff',fontSize:'1.0vw'}} >ログイン</Button>
+                <Button color="#fff"  startIcon={<PersonIcon />} sx={{ color: "#fff",outlineColor:'#fff',fontSize:'0.4em'}} >新規登録</Button>
+                <Button color="secondary"  startIcon={<LoginIcon />} sx={{ color: "#fff",outlineColor:'#fff',fontSize:'0.4em'}} >ログイン</Button>
             </Stack>
         </div>
     );
@@ -41,12 +41,15 @@ const Header = () => {
     return (
         <>
             <div class = 'header-container'>    
-                <LogoPanel />
-                <UserActions />
+                <div class = 'header-logo'>
+                    <LogoPanel />
+                </div>
+                <div class = 'header-actions'>
+                    <UserActions />
+                </div>
             </div>
             <Nav />
         </>
-
     );
 }
 

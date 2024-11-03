@@ -24,3 +24,9 @@
     font-family:'Yumincho', serif;
 }
 
+/* ページ全体の最小幅を指定 */
+body {
+    min-width: 900px; /* 必要に応じて任意の幅に設定 */
+    overflow-x: auto; /* 横スクロールを許可 */
+}
+

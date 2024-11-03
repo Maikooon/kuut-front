@@ -9,7 +9,7 @@ import '../assets/styles/body.css';
 import RecommendCard from '../components/mui/recommendCard';
 import FrontImageContainer from '../components/layout/FrontImageContainer';
 import EventCard from '../components/mui/eventCard';
-import Search from '../components/mui/search';
+import Search from '../components/mui/searchEngine';
 import FAQ from '../components/home/faq';
 import { useNavigate } from 'react-router-dom';
 import SearchFilter from '../components/mui/searchFilter';

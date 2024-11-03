@@ -8,6 +8,7 @@ import Article from './pages/Article';
 import EventSeminerDetail from './pages/EventSeminerDetail';    
 import ArticleDetail from './pages/ArticleDetail';
 import ArticleDetailExperience from './pages/ArticleDetailExperence';
+import Search from './pages/Search';
 
 //画面遷移をしたいときようにここにルーティングを定義する ,ここと遷移もとのPageだけでおk
 function App() {
@@ -22,7 +23,9 @@ function App() {
             <Route path="/article/experience" element={<ArticleDetailExperience />} />
             <Route path="/article/detail" element={<ArticleDetail />} />
             <Route path="/eventSeminerDetail" element={<EventSeminerDetail />} />
+            <Route path="/search" element={<Search />} />
         </Routes>
+
     );
 }
 

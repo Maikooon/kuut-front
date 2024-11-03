@@ -138,7 +138,7 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
-function Search ({onSearch}) {
+function SearchEngine ({onSearch}) {
     const [searchValue, setSearchValue] = useState("");
 
     const selections = [
@@ -168,4 +168,4 @@ function Search ({onSearch}) {
 
 
 // export default Search;
-export default Search;
+export default SearchEngine;
