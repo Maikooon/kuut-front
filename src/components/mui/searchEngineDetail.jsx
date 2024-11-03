@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './../../assets/styles/search.css';
+import './../../assets/styles/search/searchEngineDetail.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -138,7 +138,7 @@ const  SelectSmall = ({title,selections}) => {
 }
 
 
-function Search ({onSearch}) {
+function SearchEngineDetail ({onSearch}) {
     const [searchValue, setSearchValue] = useState("");
 
     const selections = [
@@ -168,4 +168,4 @@ function Search ({onSearch}) {
 
 
 // export default Search;
-export default Search;
+export default SearchEngineDetail;
