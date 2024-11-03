@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './../../assets/images/logo.png';
+import logo2 from './../../assets/images/logo2.png';
 import './../../assets/styles/logoPanel.css';
 
 const LogoPanel = () => {
     return (
         <div class="logo-container">
             <div class =  "logo-style">
-                <img src={logo}  />
+                <img src={logo2}  />
             </div>
-            <p>東大特化長期インターマッチング KUUT</p>
+            <p>KUUT</p>
+            <p>東大生だけのハイクラスインターン</p>
         </div>
     );
 }
