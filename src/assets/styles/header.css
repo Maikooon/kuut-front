@@ -1,16 +1,18 @@
 
 .header-container{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    background-color: #3A3D46;
-    padding: 1%;
-    padding-right: 4%;
+    /* justify-content: space-between;  */
+    background: radial-gradient(circle, #011654, #00279B, #01237D);
+    padding: 0 4%;
+    /* gap: 16%; */
+    /* padding-right: 4%; */
 }
 
 .title-box p{
     color: #FFFFFF;
-    font-size: 180%;
+    font-size: 2.4em;
     /* font-size: 1.2rem; */
     margin: 0%;
     font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
@@ -20,7 +22,9 @@
 .user-actions  {
     display: 'flex';
     align-items: 'center';
-
+    /* background-color: rebeccapurple; */
+    padding: 0 4%; 
+    font-size: 1.6em; 
 };
 
 /* styles.css */
@@ -34,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
-    background-color: #3A3D46;
+    background: radial-gradient(circle, #011654, #00279B, #01237D);
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
 }
@@ -43,6 +47,7 @@
     color: #ffffff; 
     font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
     font-weight: 600;
+    font-size: 1.0em;
     padding: 0.001vw 2%;
 }
 
@@ -168,4 +173,17 @@
     font-family: 'Yumincho', serif;  /* Yumincho フォントを指定 */
 }
 
+.header-logo{
+    width: 60%;
+    /* background-color: #06C755; */
+}
 
+.header-actions{
+    width: 40%;
+    /* background-color: #06C755; */
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    gap: 2%;
+
+}
