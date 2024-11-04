@@ -26,6 +26,9 @@ function Home() {
     navigate('/companyDetail'); // 遷移先のパスを指定
   };
 
+  const toGooglePage = () => {
+    navigate('/static_pages'); // 遷移先のパスを指定
+  };
   const toContactForm = () => {
     navigate('/contact'); // 遷移先のパスを指定
   }

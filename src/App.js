@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Router,Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Test from './pages/Test';
 import Company from './pages/Company';
+import GoogleLogin from './pages/GoogleLogin';
 import ContactForm from './pages/ContactForm';
 import EventSeminer from './pages/EventSeminer';
 import Article from './pages/Article';
@@ -17,6 +18,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<Test />} />
             <Route path="/companyDetail" element={<Company />} />
+            <Route path="/static_pages" element={<GoogleLogin />} />
+            <Route path="/after_login" element={<Test />} />
             <Route path ="/contact" element={<ContactForm />} />
             <Route path="/eventSeminer" element={<EventSeminer />} />
             <Route path="/article" element={<Article />} />
