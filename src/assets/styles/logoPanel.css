@@ -2,28 +2,32 @@
     display: flex;
     align-items: center;
     /* padding: 1.0vw  5vw; */
-    background-color: #3A3D46;
-    justify-content: space-between;
+    background-color: transparent;
+    /* justify-content: space-between; */
+    padding: 0 4%;
+    gap: 2%;
 }
+
 
 .logo-container p {
     color: #ffffff; 
     font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
     font-weight: 600;
     margin: 0;
-    font-size: 1.6vw;
-    padding-left: 8px;
+    font-size: 1.2em;
+    /* padding-left: 8px; */
 }
 
 
 .logo-style  {
     height: 70px;
-    width: 70px;
+    width: 100px;
     display: flex;
     align-items: 'center';  
     justify-content: 'center';
-    background-color:#3A3D46;
     margin: 0;
+    padding: 0;
+    /* background-color: aqua */
 };
 
 .logo-style img {
@@ -32,6 +36,7 @@
     display: flex;
     align-items: 'center';  
     justify-content: 'center';
-    background-color:#3A3D46;
     margin: 0;
+    /* background-color: rebeccapurple; */
 };
+

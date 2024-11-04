@@ -1,6 +1,10 @@
 import React from "react";
 import './../../assets/styles/searchFilter.css';
 
+/*
+下の部分にある、ボタンを押したらそのボタンに対するページに遷移する方法
+*/
+
 const SearchFilter = ({title}) => {
     const data = [
         { id: 1, name: '東京都', link: 'localhost:3000/tokyo' },
@@ -22,7 +26,7 @@ const SearchFilter = ({title}) => {
             <div class="filtering">
                 {data.map((item)=> (
                     <a key ={item.id} href={item.link}>
-                        > {item.name}
+                        {item.name}
                     </a>
                 ))}
             </div>

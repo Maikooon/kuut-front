@@ -1,0 +1,64 @@
+
+.event-seminer{
+    padding: 4vw 3vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-self: center;
+}
+
+.event-seminer h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}
+
+.event-seminer-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    background: linear-gradient(45deg,#D51319,#FF7171); /* グラデーション */
+    padding: 0.4% 4%;
+    margin-top: 2%;
+}
+
+.event-seminer-title p{
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+}
+
+.event-seminer-title-past{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    background: linear-gradient(45deg,#19539E,#6F96C9); /* グラデーション */
+    padding: 0.4% 4%;
+    margin-top: 2%;
+}
+
+.event-seminer-title-past p{
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+}
+
+.event-seminer-card-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2%;
+    gap: 2%;
+    row-gap: 20px;  
+}
+
+

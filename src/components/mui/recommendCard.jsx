@@ -1,10 +1,10 @@
 import React from "react";
 import './../../assets/styles/recommendCard.css';
-import frontImage from './../../assets/images/front-image.png';
 import WorkIcon from '@mui/icons-material/Work';
 import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import TrainIcon from '@mui/icons-material/Train';
+import WOLF from './../../assets/images/wolf.png';
 
 const PictureTitle = ({ icon, title, explain }) => {
     return (
@@ -22,7 +22,7 @@ const RecommendCard = ({ explain }) => {
         <>
             <div class="recommend-card">
                 <div class="image">
-                    <img src={frontImage} alt="company-image" />
+                    <img src={WOLF} alt="company-image" />
                 </div>
                 <div class="company">株式会社Wolf Group</div>
                 <div class="title">月収100万円も目指せる広告代理店インターン</div>

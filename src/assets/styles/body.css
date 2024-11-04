@@ -1,6 +1,12 @@
 /* bodyのPadding とか色とかを指定する */
 
 
+/* フォントの指定 */
+@font-face {
+    font-family: 'Yumincho';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
+}
+
 .header{
     font-family:'Yumincho', serif;  /* Yumincho フォントを指定 */
 }
@@ -16,5 +22,11 @@
 .container{
     padding: 2vh 4vw;
     font-family:'Yumincho', serif;
+}
+
+/* ページ全体の最小幅を指定 */
+body {
+    min-width: 900px; /* 必要に応じて任意の幅に設定 */
+    overflow-x: auto; /* 横スクロールを許可 */
 }
 

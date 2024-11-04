@@ -1,0 +1,146 @@
+.event-seminer-detail {
+    padding: 4vw 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-bottom: 16%;
+}
+
+
+.event-seminer-detail-card{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 0 auto;
+    width: 90%;
+    padding: 4% 4%;
+    /* padding: 4%; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* インターンのタイトルを設定する */
+.detail-title
+{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-color: #E6F2FF;
+    padding: 2vw 3vw;
+    /* flex-direction: row; */
+    border-top: 1px solid #B0B8FF;
+    border-bottom: 1px solid #B0B8FF;
+}
+
+.detail-title h3{
+    margin : 0;
+    font-size: 1.6em;
+}
+
+.detail-title h2{
+    margin : 0;
+    font-size: 2.0em;
+}
+
+
+/* 次のイメージ画像などを入れる */
+.event-seminer-detail-box{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    padding: 2vw 0vw;
+    width: 100%;
+}
+
+.event-seminer-detail-text {
+    width: 80%;
+    padding: 2% 4%;
+    gap: 2%;
+    /* background-color: #B0B8FF; */
+}
+
+
+.event-seminer-detail-text{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding: 0% 4%;
+    margin: 0;
+}
+
+
+/* 画像 */
+.event-seminer-detail-image{
+    width: 100%;
+    /* background-color: blueviolet; */
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+.event-seminer-detail-image img{
+    width: 100%;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+/* 参加企業に対して */
+.event-seminer-detail-join-company{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding-top: 12%;
+}
+
+.event-seminer-detail-join-company h3{
+    margin : 0;
+    font-size: 1.6em;
+}
+
+
+.event-seminer-detail-text h3{
+    margin : 0;
+    font-size: 1.2em;
+}   
+
+
+.event-seminer-detail-text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding-bottom: 12%;
+}
+
+.event-seminer-detail-text-content p{
+    margin : 0;
+    font-size: 1.0em;
+}
+
+
+.box-column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* 右の部分のバーの部分 */
+.event-nav {
+    width: 20%;
+    position: sticky;
+    top: 4%;
+    height: fit-content;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+    margin-top: 2%;
+    padding: 2% 4%;
+    gap: 2%;
+}
