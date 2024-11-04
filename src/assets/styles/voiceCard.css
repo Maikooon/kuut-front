@@ -5,52 +5,53 @@
     padding: 0;
 }  
 
-
-.card {
-    width: 34vh;
-    height: 32vh;
+.voice-card {
+    width: 100%;
+    /* height: 268px; */
     display: flex;
     flex-direction: column;
-    justify-content:first baseline;
-    padding: 1.5% 2%;
+    /* background-color: red; */
     background-color: #3A3D46;
-    border-color: #747474;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin:5% 2%;
+    border-color: #3A3D46;
+    margin: 0;
+
 }
 
 .voice {
-    font-size: 0.8em;
-    color: #ffffff;
-    padding-bottom: 1.6%;
+    padding-bottom: 0.4em;
+    display: flex;
+    align-items: left;
+    justify-content: left;
     padding-top: 5%;
     padding-right: 5%;
     padding-left: 5%;
+    color: #ffffff;
+    gap: 2%;
 }
 
 .border {
-    padding-bottom: 1.6%;
+    /* padding-bottom: 1.6%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     border-bottom: 1px solid #747474;
-    padding-right: 5%;
-    padding-left: 5%;
-    margin: 0;
 }   
 
 .company-info{
-    padding-top: 3.6%;
+    padding-top: 1.0em;
     display: flex;
-    color: #ffffff;
-    font-size: 0.8em;
+    font-size: 1.0em;
     padding-right: 5%;
     padding-left: 5%;
+    margin: 0;
+    color: #ffffff;
 }
 
 .university-info{
-    padding-top: 3.2%;
     display: flex;
-    color: #ffffff;
     font-size: 1.2em;
-
+    color: #ffffff; 
     padding-right: 5%;
     padding-left: 5%;
 }
@@ -62,19 +63,68 @@
     /* justify-content: space-between; */
     align-items: center;
     display: flex;
+    font-size: 1.2m;
+    padding-right: 5%;
+    padding-left: 5%;
     color: #ffffff;
-    font-size: 1.2vw;
+    margin: 0;
+}
 
+.comment{
+    padding-top: 0.8em;
+    padding-bottom: 6%;
+    display: flex;
+    color: #ffffff;
+    font-size: 1.0em;
     padding-right: 5%;
     padding-left: 5%;
 }
 
-.comment{
-    padding-top: 3.6%;
-    padding-bottom: 6%;
+
+
+
+/* Swiperコンテナの基本スタイル */
+swiper-container {
+    width: 100%;
+    /* height: 300px; */
+    display: block;
+    overflow: hidden; /* スライダーの範囲外を隠す */
+    margin:0; 
+    padding-bottom: 2%;
+}
+
+swiper-button-next,
+swiper-button-prev {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+    width: 3px;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;  /* アイコンのサイズを変更する場合 */
+
+}
+
+  /* スライドのスタイル */
+swiper-slide {
     display: flex;
-    color: #ffffff;
-    font-size: 0.9em;
-    padding-right: 5%;
-    padding-left: 5%;
+    justify-content: center; 
+    align-items: center; 
+    width: 400px;
+}
+
+.test{
+    width: 340px;
+    height: 294px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background-color: #3A3D46;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius:7px;
+    margin: 2px;
+    padding: 2px;
 }

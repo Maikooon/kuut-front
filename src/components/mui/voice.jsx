@@ -1,4 +1,4 @@
-import { React,useState } from 'react';
+import { React } from 'react';
 import './../../assets/styles/voiceCard.css';
 import Rating from '@mui/material/Rating';
 import './../../assets/styles/test.css';
@@ -6,15 +6,19 @@ import './../../assets/styles/test.css';
 import { register } from "swiper/element/bundle";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import CampaignIcon from '@mui/icons-material/Campaign';
+
+// SwiperのWeb Componentsを登録
+register();
+
 
 const VoiceCard = ({company,belong,rank, text}) => {
     // const [value, setValue] = useState();
 
     //多分ここでカードに入る情報を取得する
     return (
-        <>
-            <div class="card">
-                <div class="voice">Voice</div>
+            <div class="voice-card">
+                <div class="voice">Voice<CampaignIcon/></div>
                 <div class="border" />
                 {/* ここからデータを参照 */}
                 <div class="company-info">{company}</div>
@@ -26,14 +30,9 @@ const VoiceCard = ({company,belong,rank, text}) => {
                 <div class="comment">
                     {text}
                 </div>
-            <br/>
-            <br/>
             </div>
-        </>
     );
 }
-
-register();
 
 const Voice = () => {
     const data = [
@@ -70,41 +69,29 @@ const Voice = () => {
     ];
     return (
         <>
-            {/* <div class="voice-container">
-                
-                {data.map((data) =>
-                    <VoiceCard  
-                        company={data.company} 
-                        belong={data.belong} 
-                        rank={data.rank}    
-                        text={data.text}/>
-                    )
-                }
-                
-            </div> */}
-            <swiper-container style={
-                    {
-                    "--swiper-navigation-color": "#fff", 
-                    "--swiper-pagination-color": "#fff"
-                    }
-                } 
-                pagination-clickable="true" 
-                // navigation="true" 
-                className="mySwiper"
-                slides-per-view={4}
+            <swiper-container
+                style={{
+                        "--swiper-navigation-color": "#fff",
+                        "--swiper-pagination-color": "#fff"
+                    }}
+                    pagination="true"
+                    navigation="true"
+                    slides-per-view="4"
+                    class="mySwiper"
             >
-                {data.map((data) =>
-                    <swiper-slide lazy="true">
-                        <VoiceCard  
-                            company={data.company} 
-                            belong={data.belong} 
-                            rank={data.rank}    
-                            text={data.text}/>
-                    </swiper-slide>
-                )}
-    
-                
-            </swiper-container>
+            {data.map((item, index) => (
+                <swiper-slide key={index}>
+                    <div class="test">
+                        <VoiceCard
+                            company={item.company}
+                            belong={item.belong}
+                            rank={item.rank}
+                            text={item.text}
+                        /> 
+                    </div>
+                </swiper-slide>
+            ))}
+        </swiper-container>
         </>
     )
 }
