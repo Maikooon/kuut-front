@@ -35,7 +35,7 @@ function Home() {
 
     //新しいページに遷移する時にはここに追記
     const handleEventSeminer = () => {
-      navigate('/eventSeminer'); // 遷移先のパスを指定
+      navigate('/events'); // 遷移先のパスを指定
     };
     //新しいページに遷移する時にはここに追記
     const handleArticle = () => {
