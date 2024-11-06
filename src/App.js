@@ -21,7 +21,7 @@ function App() {
             <Route path="/static_pages" element={<GoogleLogin />} />
             <Route path="/after_login" element={<Test />} />
             <Route path ="/contact" element={<ContactForm />} />
-            <Route path="/eventSeminer" element={<EventSeminer />} />
+            <Route path="/events" element={<EventSeminer />} />
             <Route path="/article" element={<Article />} />
             <Route path="/article/experience" element={<ArticleDetailExperience />} />
             <Route path="/article/detail" element={<ArticleDetail />} />

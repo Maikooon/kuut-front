@@ -14,17 +14,18 @@ const EventBar = () => {
     );
 }
 
-const EventCard = ({ explain }) => {
+const EventCard = ({name,sub_name, place }) => {
     return (
         <>
             <div class="event-card">
                 <img src={frontImage} alt="company-image" />
                 <div class="event-title">
                     <EventBar />
-                    <p>【初コラボ！！】</p>
-                    <p>東大メシ×慶應メシ</p>
+                    <p>【{name}】</p>
+                    <p>{name}</p>
                     {/* <div class="info">{explain}</div> */}
-                    <div class="info">連続起業家の真田 哲弥さんを東大生・慶應生でお迎えしました！</div>
+                    <div class="info">{sub_name}</div>
+                    <div class="info">{place}</div>     
                 </div>
             </div>
         </>
